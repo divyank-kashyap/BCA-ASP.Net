@@ -6,12 +6,12 @@ Module Program
 
         Console.WriteLine("Welcome to the Cafe Menu!")
         Console.WriteLine("Menu:")
-        Console.WriteLine("1. Coffee - INR 20")
-        Console.WriteLine("2. Tea - INR 10")
-        Console.WriteLine("3. Sandwich - INR35")
-        Console.WriteLine("4. Pizza - INR 70")
-        Console.WriteLine("5. Burger - INR 40")
-        Console.WriteLine("6. Noodles - INR 50")
+        Console.WriteLine("1. Coffee - 20 INR")
+        Console.WriteLine("2. Tea - 10 INR")
+        Console.WriteLine("3. Sandwich - 35 INR")
+        Console.WriteLine("4. Pizza - 70 INR")
+        Console.WriteLine("5. Burger - 40 INR")
+        Console.WriteLine("6. Noodles - 50 INR")
         Console.WriteLine("7. Exit")
 
         While True
