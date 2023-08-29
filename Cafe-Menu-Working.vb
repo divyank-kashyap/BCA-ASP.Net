@@ -15,7 +15,7 @@ Module Program
         Console.WriteLine("7. Exit")
 
         While True
-            Console.Write("Enter your choice (1-5): ")
+            Console.Write("Enter your choice (1-7): ")
             Dim choice As Integer = Console.ReadLine()
 
             Select Case choice
