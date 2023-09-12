@@ -1,6 +1,4 @@
 Imports System
-Imports System.Net.Mail
-Imports System.Threading
 
 Module Program
     Class VEHICLE
@@ -13,24 +11,24 @@ Module Program
             speed = 0
         End Sub
 
-        Public Sub New(name As String, sped As Double)
+        Public Sub New(name As String, Speed As Double)
             n = name
-            speed = sped
-            Console.WriteLine("Speed is " & speed)
+            Speed = Speed
+            Console.WriteLine("Speed is " & Speed)
         End Sub
 
         Public Overridable Sub typ(typ As String)
-            type = typ
-            Console.WriteLine("Type of vehicle is " & type)
+            typ = typ
+            Console.WriteLine("Type of vehicle is " & typ)
         End Sub
     End Class
 
-    Class BMW
+    Class AltoK10
         Inherits VEHICLE
         Protected mile As Double
 
-        Public Sub New(name, sped)
-            MyBase.New("bmw", 40)
+        Public Sub New(name, Speed)
+            MyBase.New("AltoK10", 40)
         End Sub
 
         Public Sub mileage(distance As Double, litres As Double)
@@ -43,16 +41,16 @@ Module Program
         End Function
 
         Public Overridable Sub typ(typ As String)
-            MyBase.typ("automatic")
+            MyBase.typ("Manual")
         End Sub
     End Class
 
-    Class ferrari
+    Class Kwid
         Inherits VEHICLE
         Public mil As Double
 
-        Public Sub New(name, sped)
-            MyBase.New("ferrari", 60)
+        Public Sub New(name, Speed)
+            MyBase.New("Kwid", 60)
         End Sub
 
         Public Sub mileage(distance As Double, litres As Double)
@@ -65,16 +63,16 @@ Module Program
         End Function
 
         Public Overridable Sub typ(type As String)
-            MyBase.typ("automatic")
+            MyBase.typ("Manual")
         End Sub
     End Class
 
-    Class audi
+    Class Tiago
         Inherits VEHICLE
         Public mil As Double
 
-        Public Sub New(name, sped)
-            MyBase.New("AUDI", 70)
+        Public Sub New(name, Speed)
+            MyBase.New("Tiago", 70)
         End Sub
 
         Public Sub mileage(distance As Double, litres As Double)
@@ -86,44 +84,44 @@ Module Program
             Return mil
         End Function
 
-        Public Overridable Sub typ(typ As String)
-            MyBase.typ("automatic")
+        Public Overridable Sub typ(type As String)
+            MyBase.typ("Manual")
         End Sub
     End Class
 
     Sub main()
-        Dim mee As Double
-        Dim meet As Double
-        Dim meetu As Double
-        Console.WriteLine("Information of BMW " & vbCrLf)
-        Dim c1 As BMW = New BMW("BMW", 48)
-        c1.typ("automatic")
-        c1.mileage(165, 5)
-        mee = c1.getValue()
+        Dim v1 As Double
+        Dim v2 As Double
+        Dim v3 As Double
+        Console.WriteLine("Specifications of AltoK10 " & vbCrLf)
+        Dim c1 As AltoK10 = New AltoK10("AltoK10", 22)
+        c1.typ("Manual")
+        c1.mileage(110, 5)
+        v1 = c1.getValue()
         Console.WriteLine("")
 
-        Console.WriteLine("Information fo Ferrari" & vbCrLf)
-        Dim c2 As ferrari = New ferrari("ferrari", 50)
-        c2.typ("automatic")
-        c2.mileage(175, 5)
-        meet = c2.val()
+        Console.WriteLine("Specifications of Kwid" & vbCrLf)
+        Dim c2 As Kwid = New Kwid("Kwid", 20)
+        c2.typ("Manual")
+        c2.mileage(100, 5)
+        v2 = c2.val()
         Console.WriteLine("")
 
-        Console.WriteLine("Information of AUDI" & vbCrLf)
-        Dim c3 As audi = New audi("AUDI", 78)
-        Type.GetType("Automatic")
-        c3.mileage(185, 5)
-        meetu = c3.val()
+        Console.WriteLine("Specifications of Tiago" & vbCrLf)
+        Dim c3 As Tiago = New Tiago("Tiago", 16)
+        c3.typ("Manual")
+        c3.mileage(80, 5)
+        v3 = c3.val()
         Console.WriteLine("")
 
-        If mee > meet Then
-            If mee > meetu Then
-                Console.WriteLine("BMW has more mileage than Ferrari  so its more econimical")
+        If v1 > v2 Then
+            If v1 > v3 Then
+                Console.WriteLine("AltoK10 is more economical with high mileage")
             End If
-        ElseIf meet > meetu Then
-            Console.WriteLine("Ferrari is more economical with high mileage")
+        ElseIf v2 > v3 Then
+            Console.WriteLine("Kwid is more economical with high mileage")
         Else
-            Console.WriteLine("Audi is more economical with high mileage")
+            Console.WriteLine("Tiago is more economical with high mileage")
         End If
 
         Console.ReadLine()
