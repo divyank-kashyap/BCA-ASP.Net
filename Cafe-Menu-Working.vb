@@ -4,7 +4,7 @@ Module Program
     Sub Main()
         Dim totalCost As Integer = 0
 
-        Console.WriteLine("Welcome to the Cafe Menu!")
+        Console.WriteLine("Welcome to the Cafe!")
         Console.WriteLine("Menu:")
         Console.WriteLine("1. Coffee - 20 INR")
         Console.WriteLine("2. Tea - 10 INR")
