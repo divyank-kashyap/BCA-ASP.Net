@@ -1,5 +1,4 @@
 Imports System
-Imports System.Runtime.ConstrainedExecution
 
 Module Program
     Sub Main()
@@ -11,7 +10,7 @@ Module Program
         Console.WriteLine("Enter name:")
         name = Console.ReadLine()
         For i = 0 To 4 Step 1
-            Console.WriteLine("Enter marks: ")
+            Console.WriteLine("Enter marks for subject " & (i + 1))
             marks(i) = Console.ReadLine()
         Next
 
