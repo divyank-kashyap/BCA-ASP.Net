@@ -3,31 +3,24 @@ Imports System.Runtime.ConstrainedExecution
 
 Module Program
     Sub Main()
-        Dim sub1, sub2, sub3, sub4, sub5, total As Integer
+        Dim total As Integer
         Dim name As String
         Dim per As Double
+        Dim marks As Double() = New Double(5) {}
 
-        Console.WriteLine("Enter the name:")
+        Console.WriteLine("Enter name:")
         name = Console.ReadLine()
+        For i = 0 To 4 Step 1
+            Console.WriteLine("Enter marks: ")
+            marks(i) = Console.ReadLine()
+        Next
 
-        Console.WriteLine("Enter the Marks:")
-        sub1 = Console.ReadLine()
-        Console.WriteLine("Enter the Marks:")
-        sub2 = Console.ReadLine()
-        Console.WriteLine("Enter the Marks:")
-        sub3 = Console.ReadLine()
-        Console.WriteLine("Enter the Marks:")
-        sub4 = Console.ReadLine()
-        Console.WriteLine("Enter the Marks:")
-        sub5 = Console.ReadLine()
-
-        total = sub1 + sub2 + sub3 + sub4 + sub5
+        For i = 0 To 4 Step 1
+            total += marks(i)
+        Next
         per = total / 5
         Console.WriteLine("Total Marks = " & total)
         Console.WriteLine("Average = " & per)
-
-
-
 
         If (per >= 75) Then
             Console.WriteLine("1st Division")
