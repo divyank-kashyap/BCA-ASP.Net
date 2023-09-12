@@ -77,7 +77,7 @@ Module Program
 
             End If
         End While
-        Console.WriteLine(vbCrLf & "Total bill of your order is = {0}", totalbill & "Rs." & vbCrLf & "THANK YOU FOR COMING :>)... HAVE A NICE DAY ")
+        Console.WriteLine(vbCrLf & "Total bill of your order is = {0}", totalbill & "INR" & vbCrLf & "THANK YOU FOR COMING :>)... HAVE A NICE DAY ")
         Console.ReadLine()
     End Sub
 End Module
