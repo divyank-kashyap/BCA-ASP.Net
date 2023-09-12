@@ -34,7 +34,6 @@ Module Program
         Else
             Console.WriteLine("Fail")
         End If
-
         Console.ReadLine()
     End Sub
 End Module
