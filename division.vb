@@ -18,9 +18,9 @@ Module Program
         For i = 0 To 4 Step 1
             total += marks(i)
         Next
-        per = total / 5
+        per = total / 500 * 100
         Console.WriteLine("Total Marks = " & total)
-        Console.WriteLine("Average = " & per)
+        Console.WriteLine("Percentage = " & per)
 
         If (per >= 75) Then
             Console.WriteLine("1st Division")
